@@ -661,3 +661,87 @@
         gap: 10px;
     }
 }
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* For Tablets and Desktops smaller than 1200px */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr 1fr; /* Drop to 2 columns first */
+        gap: 20px;
+    }
+    .col-features {
+        grid-column: span 2; /* Move features to their own row */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* For Smartphones (768px and below) */
+@media (max-width: 768px) {
+    
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .features {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    /* Hero Section */
+    .hero-header h1 {
+        font-size: 32px;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr; /* Single column stack */
+    }
+    .col-image {
+        display: none; /* Hide couple image on mobile to save space */
+    }
+    .cta-card {
+        width: 100%;
+    }
+
+    /* Benefits & Counter */
+    .benefits h2 {
+        font-size: 28px;
+    }
+    .digit {
+        width: 40px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+    }
+
+    /* Category Cards */
+    .category-card {
+        flex-direction: column; /* Stack image on top of text */
+    }
+    .cat-image {
+        min-height: 200px;
+    }
+
+    /* Why Choose (DNA Section) */
+    .why-grid {
+        grid-template-columns: 1fr; /* Stack 4 items vertically */
+        gap: 40px;
+    }
+    .dna-line {
+        display: none; /* Hide the central axis on mobile */
+    }
+    .btn-large-cta-bottom {
+        margin-top: 40px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        font-size: 16px;
+    }
+}
